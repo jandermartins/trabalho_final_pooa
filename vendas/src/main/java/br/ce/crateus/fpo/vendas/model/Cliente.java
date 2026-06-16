@@ -2,7 +2,6 @@ package br.ce.crateus.fpo.vendas.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDate;
 
 @Builder

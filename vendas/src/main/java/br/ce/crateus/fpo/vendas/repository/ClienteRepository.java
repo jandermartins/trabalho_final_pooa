@@ -1,4 +1,4 @@
-package br.ce.crateus.fpo.vendas;
+package br.ce.crateus.fpo.vendas.repository;
 
 import br.ce.crateus.fpo.vendas.model.Cliente;
 import jakarta.validation.constraints.Email;

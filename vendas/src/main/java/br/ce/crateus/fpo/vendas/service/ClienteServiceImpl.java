@@ -1,6 +1,6 @@
 package br.ce.crateus.fpo.vendas.service;
 
-import br.ce.crateus.fpo.vendas.ClienteRepository;
+import br.ce.crateus.fpo.vendas.repository.ClienteRepository;
 import br.ce.crateus.fpo.vendas.dto.ClienteRequestDTO;
 import br.ce.crateus.fpo.vendas.dto.ClienteResponseDTO;
 import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
@@ -9,7 +9,6 @@ import br.ce.crateus.fpo.vendas.model.Cliente;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
