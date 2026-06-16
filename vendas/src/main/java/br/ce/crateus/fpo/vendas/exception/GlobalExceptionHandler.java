@@ -19,7 +19,6 @@ public class GlobalExceptionHandler {
         body.put("error", "Recurso não encontrado");
         body.put("message", ex.getMessage());
         body.put("path", ""); // você pode adicionar a URI via RequestAttributes se quiser
-
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
 }
