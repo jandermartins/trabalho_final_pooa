@@ -1,7 +1,7 @@
-package br.ce.crateus.fpo.vendas.service;
+package br.ce.crateus.fpo.vendas.service.interfaces;
 
-import br.ce.crateus.fpo.vendas.dto.ClienteRequestDTO;
-import br.ce.crateus.fpo.vendas.dto.ClienteResponseDTO;
+import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
+import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import jakarta.validation.Valid;
 import java.util.List;
 

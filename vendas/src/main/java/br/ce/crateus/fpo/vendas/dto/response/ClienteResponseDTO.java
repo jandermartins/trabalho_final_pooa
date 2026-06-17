@@ -1,4 +1,4 @@
-package br.ce.crateus.fpo.vendas.dto;
+package br.ce.crateus.fpo.vendas.dto.response;
 
 import lombok.Builder;
 import lombok.Data;

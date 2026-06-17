@@ -1,11 +1,12 @@
 package br.ce.crateus.fpo.vendas.service;
 
 import br.ce.crateus.fpo.vendas.repository.ClienteRepository;
-import br.ce.crateus.fpo.vendas.dto.ClienteRequestDTO;
-import br.ce.crateus.fpo.vendas.dto.ClienteResponseDTO;
+import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
+import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
 import br.ce.crateus.fpo.vendas.mapper.ClienteMapper;
 import br.ce.crateus.fpo.vendas.model.Cliente;
+import br.ce.crateus.fpo.vendas.service.interfaces.ClienteService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class ClienteServiceImpl implements  ClienteService {
+public class ClienteServiceImpl implements ClienteService {
     @Override
     public List<ClienteResponseDTO> listarTodos() {
         return repository.findAll().stream().map(mapper::toResponseDTO).collect(Collectors.toList());

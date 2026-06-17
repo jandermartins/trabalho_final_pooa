@@ -1,7 +1,7 @@
 package br.ce.crateus.fpo.vendas.mapper;
 
-import br.ce.crateus.fpo.vendas.dto.ClienteRequestDTO;
-import br.ce.crateus.fpo.vendas.dto.ClienteResponseDTO;
+import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
+import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import br.ce.crateus.fpo.vendas.model.Cliente;
 import org.springframework.stereotype.Component;
 
