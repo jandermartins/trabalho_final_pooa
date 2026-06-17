@@ -1,8 +1,8 @@
 package br.ce.crateus.fpo.vendas.service;
 
 import br.ce.crateus.fpo.vendas.repository.ClienteRepository;
-import br.ce.crateus.fpo.vendas.dto.ClienteRequestDTO;
-import br.ce.crateus.fpo.vendas.dto.ClienteResponseDTO;
+import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
+import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
 import br.ce.crateus.fpo.vendas.mapper.ClienteMapper;
 import br.ce.crateus.fpo.vendas.model.Cliente;
