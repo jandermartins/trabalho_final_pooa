@@ -2,7 +2,7 @@ package br.ce.crateus.fpo.vendas.controller;
 
 import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
 import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
-import br.ce.crateus.fpo.vendas.service.ClienteService;
+import br.ce.crateus.fpo.vendas.service.interfaces.ClienteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;

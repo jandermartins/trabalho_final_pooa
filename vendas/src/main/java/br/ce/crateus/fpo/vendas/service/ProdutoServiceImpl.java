@@ -6,6 +6,7 @@ import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
 import br.ce.crateus.fpo.vendas.mapper.ProdutoMapper;
 import br.ce.crateus.fpo.vendas.model.Produto;
 import br.ce.crateus.fpo.vendas.repository.ProdutoRepository;
+import br.ce.crateus.fpo.vendas.service.interfaces.ProdutoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class ProdutoServiceImpl implements ProdutoService{
+public class ProdutoServiceImpl implements ProdutoService {
 
     private final ProdutoRepository repository;
     private final ProdutoMapper mapper;

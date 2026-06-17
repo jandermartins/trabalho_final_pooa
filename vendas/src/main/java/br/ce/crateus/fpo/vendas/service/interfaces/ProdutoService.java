@@ -1,4 +1,4 @@
-package br.ce.crateus.fpo.vendas.service;
+package br.ce.crateus.fpo.vendas.service.interfaces;
 
 import br.ce.crateus.fpo.vendas.dto.request.ProdutoRequestDTO;
 import br.ce.crateus.fpo.vendas.dto.response.ProdutoResponseDTO;
