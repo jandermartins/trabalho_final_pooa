@@ -20,9 +20,9 @@ public class OpenApiConfig {
                                 "Implementa os 5 princípios SOLID com Spring Boot e PostgreSQL.\n\n" +
                                 "Documentação interativa disponível via Swagger UI.")
                         .contact(new Contact()
-                                .name("Francisco J S Martins")
-                                .email("jandermartins@alu.ufc.br")
-                                .url("https://github.com/jandermartins"))
+                                .name("Grupo 1")
+                                .email("grupo1@fpo.alu.br")
+                                .url("https://github.com/jandermartins/trabalho_final_pooa"))
                         .license(new License()
                                 .name("Apache 2.0")
                                 .url("https://springdoc.org")));
