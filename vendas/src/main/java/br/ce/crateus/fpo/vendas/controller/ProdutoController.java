@@ -2,12 +2,12 @@ package br.ce.crateus.fpo.vendas.controller;
 
 import br.ce.crateus.fpo.vendas.dto.request.ProdutoRequestDTO;
 import br.ce.crateus.fpo.vendas.dto.response.ProdutoResponseDTO;
-import br.ce.crateus.fpo.vendas.service.interfaces.ProdutoService;
+import br.ce.crateus.fpo.vendas.service.interfaces.IProdutoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +15,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/produtos")
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Tag(name = "Produtos", description = "Endpoints para gerenciamento de produtos")
 public class ProdutoController {
 
-    private final ProdutoService service;
+    private final IProdutoService service;
 
     @Operation(summary = "Cadastrar novo produto")
     @PostMapping

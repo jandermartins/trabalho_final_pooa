@@ -5,7 +5,7 @@ import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import jakarta.validation.Valid;
 import java.util.List;
 
-public interface ClienteService {
+public interface IClienteService {
     ClienteResponseDTO criar(@Valid ClienteRequestDTO dto);
     List<ClienteResponseDTO> listarTodos();
     ClienteResponseDTO buscarPorId(Long id);

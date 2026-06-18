@@ -33,6 +33,9 @@ public class Cliente {
 
     @PrePersist
     protected void onCreate() {
-        dataCadastro = LocalDate.now();
+        // Se a data estiver mockada, não vai ser preenchida com LocalDate.now()
+        if(this.dataCadastro == null){
+            dataCadastro = LocalDate.now();
+        }
     }
 }

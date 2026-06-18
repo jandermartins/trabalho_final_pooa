@@ -6,16 +6,16 @@ import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
 import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
 import br.ce.crateus.fpo.vendas.mapper.ClienteMapper;
 import br.ce.crateus.fpo.vendas.model.Cliente;
-import br.ce.crateus.fpo.vendas.service.interfaces.ClienteService;
+import br.ce.crateus.fpo.vendas.service.interfaces.IClienteService;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-public class ClienteServiceImpl implements ClienteService {
+@RequiredArgsConstructor
+public class ClienteServiceImpl implements IClienteService {
     @Override
     public List<ClienteResponseDTO> listarTodos() {
         return repository.findAll().stream().map(mapper::toResponseDTO).collect(Collectors.toList());
