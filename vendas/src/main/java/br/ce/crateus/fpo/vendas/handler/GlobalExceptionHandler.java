@@ -46,9 +46,10 @@ public class GlobalExceptionHandler {
         ErrorResponse response = ErrorResponse.builder()
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .erro("Erro interno do servidor")
-                .mensagem(exception.getMessage() != null ? exception.getMessage() : "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.")
+                .mensagem("Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.")
                 .timestamp(LocalDateTime.now())
                 .build();
+//        exception.printStackTrace();
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
