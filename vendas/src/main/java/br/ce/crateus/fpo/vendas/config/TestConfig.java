@@ -26,6 +26,11 @@ public class TestConfig implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        vendaRepository.deleteAll();
+        estoqueRepository.deleteAll();
+        produtoRepository.deleteAll();
+        clienteRepository.deleteAll();
+
         // MOCKANDO CLIENTES
         Cliente c1 = Cliente.builder()
                 .nome("Davi Marques")

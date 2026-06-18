@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
 import lombok.*;
 
+import java.util.List;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,4 +31,10 @@ public class Produto {
 
     @Column(nullable = false)
     private Categoria categoria;
+
+    @OneToOne(mappedBy = "produto", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private Estoque estoque;
+
+    @OneToMany(mappedBy = "produto", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private List<ItemVenda> itensVenda;
 }
