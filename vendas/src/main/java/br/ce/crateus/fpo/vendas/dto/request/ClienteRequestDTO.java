@@ -7,15 +7,19 @@ import lombok.Data;
 
 @Data
 public class ClienteRequestDTO {
+
     @NotBlank(message = "Nome é obrigatório")
     private String nome;
 
-    @NotBlank @Email
+    @NotBlank(message = "E-mail é obrigatório")
+    @Email(message = "E-mail inválido")
     private String email;
 
-    @NotBlank @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}")
+    @NotBlank(message = "CPF é obrigatório")
+    @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}", message = "CPF inválido")
     private String cpf;
 
+    // Aceita apenas vazio ou 11 dígitos
+    @Pattern(regexp = "^$|^\\d{11}$", message = "O telefone deve conter exatamente 11 números digitados (DDD + Número)")
     private String telefone;
 }
-
