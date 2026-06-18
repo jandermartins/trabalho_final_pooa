@@ -4,6 +4,6 @@ import br.ce.crateus.fpo.vendas.model.ItemVenda;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface CalculadoraVenda {
+public interface ICalculadoraVenda {
     BigDecimal calcularTotal(List<ItemVenda> itens);
 }

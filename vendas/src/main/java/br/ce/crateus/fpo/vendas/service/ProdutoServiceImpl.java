@@ -8,8 +8,8 @@ import br.ce.crateus.fpo.vendas.model.Estoque;
 import br.ce.crateus.fpo.vendas.model.Produto;
 import br.ce.crateus.fpo.vendas.repository.EstoqueRepository;
 import br.ce.crateus.fpo.vendas.repository.ProdutoRepository;
-import br.ce.crateus.fpo.vendas.service.interfaces.ProdutoService;
-import lombok.AllArgsConstructor;
+import br.ce.crateus.fpo.vendas.service.interfaces.IProdutoService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-public class ProdutoServiceImpl implements ProdutoService {
+@RequiredArgsConstructor
+public class ProdutoServiceImpl implements IProdutoService {
 
     private final ProdutoRepository repository;
     private final ProdutoMapper mapper;

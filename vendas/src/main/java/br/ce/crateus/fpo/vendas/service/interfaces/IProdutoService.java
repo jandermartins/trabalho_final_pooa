@@ -6,7 +6,7 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 
-public interface ProdutoService {
+public interface IProdutoService {
     ProdutoResponseDTO criar(@Valid ProdutoRequestDTO dto);
     List<ProdutoResponseDTO> listarTodos();
     ProdutoResponseDTO buscarPorId(Long id);

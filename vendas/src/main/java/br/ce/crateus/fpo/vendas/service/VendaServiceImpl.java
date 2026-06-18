@@ -6,7 +6,7 @@ import br.ce.crateus.fpo.vendas.exception.RecursoNaoEncontradoException;
 import br.ce.crateus.fpo.vendas.mapper.VendaMapper;
 import br.ce.crateus.fpo.vendas.model.*;
 import br.ce.crateus.fpo.vendas.repository.*;
-import br.ce.crateus.fpo.vendas.service.interfaces.CalculadoraVenda;
+import br.ce.crateus.fpo.vendas.service.interfaces.ICalculadoraVenda;
 import br.ce.crateus.fpo.vendas.service.interfaces.IEstoqueService;
 import br.ce.crateus.fpo.vendas.service.interfaces.IVendaService;
 import jakarta.transaction.Transactional;
@@ -26,7 +26,7 @@ public class VendaServiceImpl implements IVendaService {
     private final ClienteRepository clienteRepository;
     private final ProdutoRepository produtoRepository;
     private final IEstoqueService estoqueService;
-    private final CalculadoraVenda calculadoraVenda;
+    private final ICalculadoraVenda calculadoraVenda;
     private final VendaMapper mapper;
 
     @Override

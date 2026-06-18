@@ -2,23 +2,23 @@ package br.ce.crateus.fpo.vendas.controller;
 
 import br.ce.crateus.fpo.vendas.dto.request.ClienteRequestDTO;
 import br.ce.crateus.fpo.vendas.dto.response.ClienteResponseDTO;
-import br.ce.crateus.fpo.vendas.service.interfaces.ClienteService;
+import br.ce.crateus.fpo.vendas.service.interfaces.IClienteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/clientes")
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Tag(name = "Clientes", description = "Endpoints para gerenciamento de clientes")
 public class ClienteController {
 
-    private final ClienteService service;
+    private final IClienteService service;
 
     @Operation(summary = "Cadastrar novo cliente")
     @PostMapping
